@@ -35,3 +35,7 @@ INSERT INTO `services_users` ( `id_u`, `id_s`, `inscription_date`) VALUES
 
 DELETE FROM services_users
 WHERE id_s = 6
+
+/* STORY 13 */
+
+DELETE FROM services_users WHERE ( id_u =2 AND id_s = 8)

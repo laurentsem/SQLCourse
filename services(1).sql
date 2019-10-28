@@ -41,6 +41,10 @@ INSERT INTO `services` ( `id_u`, `name_s`, `desc_s`, `adress_s`, `postalcode_s`,
 DELETE FROM services
 WHERE id_s = 6
 
+/* STORY 13 */
+
+DELETE FROM services WHERE id_s = 8
+
 
 
 
