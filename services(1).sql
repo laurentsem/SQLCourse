@@ -36,6 +36,11 @@ ALTER TABLE `services`
 INSERT INTO `services` ( `id_u`, `name_s`, `desc_s`, `adress_s`, `postalcode_s`, `city_s`, `country_s`, `date_s`, `info_s`) VALUES
 ( 5, 'reparation', 'reparer des choses', '', '', '', '', '2019-11-01 16:00:00', NULL),
 
+/* STORY 12 */
+
+DELETE FROM services
+WHERE id_s = 6
+
 
 
 

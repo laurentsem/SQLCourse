@@ -30,3 +30,8 @@ INSERT INTO `services_users` (`id_s_u`, `id_u`, `id_s`, `inscription_date`) VALU
 
 INSERT INTO `services_users` ( `id_u`, `id_s`, `inscription_date`) VALUES
 ( 5, 9, '2019-11-01 17:30:00'),
+
+/* STORY 12 */
+
+DELETE FROM services_users
+WHERE id_s = 6
