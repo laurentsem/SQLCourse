@@ -27,7 +27,9 @@ ALTER TABLE `message`
 (9, 1, 4, 'Bonjour, oui je suis disponible le 4 novembre.', '2019-10-30 08:40:00'),
 (10, 1, 5, 'Bonjour, oui je suis disponible le 5 novembre.', '2019-10-30 09:00:00');
 
-/* STORY 3 */
-//
+/* STORY 7 */
+  INSERT INTO `message` (`id_exp`, `id_rec`, `message_text`, `date_m`) VALUES
+  (6, 1, 'Bonjour, je suis interessé par votre service.'', '2019-10-30' 15:00:00');
+  
 
 /* STORY 4 */
