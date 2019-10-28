@@ -17,6 +17,9 @@ ALTER TABLE `services`
   ADD PRIMARY KEY (`id_s`),
   ADD KEY `id_u` (`id_u`);
 
+  ALTER TABLE `services` DROP FOREIGN KEY `services_ibfk_1`;
+  ALTER TABLE `services` ADD CONSTRAINT `services_ibfk_1` FOREIGN KEY (`id_u`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
   /* STORY 2 */
 
   INSERT INTO `services` (`id_s`, `id_u`, `name_s`, `desc_s`, `adress_s`, `postalcode_s`, `city_s`, `country_s`, `date_s`, `info_s`) VALUES
