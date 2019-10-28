@@ -26,4 +26,7 @@ INSERT INTO `services_users` (`id_s_u`, `id_u`, `id_s`, `inscription_date`) VALU
 /* STORY 3 */
 //
 
-/* STORY 4 */
+/* STORY 5 */
+
+INSERT INTO `services_users` ( `id_u`, `id_s`, `inscription_date`) VALUES
+( 5, 9, '2019-11-01 17:30:00'),

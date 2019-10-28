@@ -32,4 +32,5 @@ ALTER TABLE `message`
   (6, 1, 'Bonjour, je suis interessé par votre service.'', '2019-10-30' 15:00:00');
   
 
-/* STORY 4 */
+/* STORY 8 */
+SELECT * FROM `message` ORDER BY date_m ASC

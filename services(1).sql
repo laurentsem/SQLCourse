@@ -32,7 +32,9 @@ ALTER TABLE `services`
 /* STORY 3 */
 //
 
-/* STORY 4 */
+/* STORY 5 */
+INSERT INTO `services` ( `id_u`, `name_s`, `desc_s`, `adress_s`, `postalcode_s`, `city_s`, `country_s`, `date_s`, `info_s`) VALUES
+( 5, 'reparation', 'reparer des choses', '', '', '', '', '2019-11-01 16:00:00', NULL),
 
 
 
