@@ -37,3 +37,8 @@ ALTER TABLE `message`
 
 /* STORY 8 */
 SELECT * FROM `message` ORDER BY date_m ASC
+
+/* STORY 15 */
+
+DELETE FROM message
+WHERE id_m = 6
