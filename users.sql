@@ -42,3 +42,8 @@ UPDATE users
     SET address= '3 rue de la coding', postal_code= '95003', city = 'Cergy', country='France' , mobile_phone='0302030405', register_date = '2019-10-28' WHERE id=3
     SET address= '4 rue de la coding', postal_code= '95004', city = 'Cergy', country='France' , mobile_phone='0402030405', register_date = '2019-10-28' WHERE id=4
     SET address= '5 rue de la coding', postal_code= '95005', city = 'Cergy', country='France' , mobile_phone='0502030405', register_date = '2019-10-28' WHERE id=5
+
+/* STORY 14 */
+
+DELETE FROM users
+WHERE id = 4
