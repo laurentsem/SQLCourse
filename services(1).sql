@@ -30,14 +30,22 @@ ALTER TABLE `services`
 (5, 1, 'coiffeur', 'coiffeur a domicile', '', '', '', '', '2019-10-28 12:00:00', NULL),
 (6, 1, 'styliste', 'styliste a domicile', '', '', '', '', '2019-10-28 12:30:00', NULL),
 (7, 1, 'menage', 'faire le menage', '', '', '', '', '2019-10-28 13:00:00', NULL),
-(8, 1, 'babysitter', 'garde d''enfants', '', '', '', '', '2019-10-28 13:30:00', NULL),
+(8, 1, 'babysitter', 'garde d''enfants', '', '', '', '', '2019-10-28 13:30:00', NULL)
 
 /* STORY 3 */
 //
 
 /* STORY 5 */
 INSERT INTO `services` ( `id_u`, `name_s`, `desc_s`, `adress_s`, `postalcode_s`, `city_s`, `country_s`, `date_s`, `info_s`) VALUES
-( 5, 'reparation', 'reparer des choses', '', '', '', '', '2019-11-01 16:00:00', NULL),
+( 5, 'reparation', 'reparer des choses', '', '', '', '', '2019-11-01 16:00:00', NULL)
+
+/* STORY 10 */
+SELECT name_s, date_s, city_s, country_s, postal_code_s
+FROM services
+WHERE date_s > 2019-10-29
+ORDER BY date_s DESC,name_s ASC;
+SELECT DISTINCT date_s
+FROM services
 
 /* STORY 12 */
 
