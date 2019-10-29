@@ -39,3 +39,22 @@ INSERT INTO `services_users` ( `id_u`, `id_s`, `inscription_date`) VALUES
 
 INSERT INTO services_users (id_s,id_u,date_us)
 VALUES (5,4,"2019-10-29 12:00:00")
+
+/* STORY 17 */
+
+SELECT services.name_s, services.desc_s, services.adress_s, services.postalcode_s, services.city_s, services.country_s, services.date_s, U1.username, U1.mobile_phone, U2.username AS users_inscrit_name, U2.email, U2.address, U2.postal_code, U2.city, U2.country, services_users.inscription_date
+FROM users AS U1
+
+LEFT JOIN services 
+ON U1.id = services.id_u
+
+LEFT JOIN services_users 
+ON services.id_s = services_users.id_s
+
+LEFT JOIN users AS U2
+ON U2.id = services_users.id_u
+
+WHERE U2.id = 2
+
+ORDER BY services_users.inscription_date ASC
+LIMIT 1
