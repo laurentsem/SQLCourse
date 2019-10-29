@@ -32,7 +32,7 @@ INSERT INTO `users` (`id`, `email`, `username`, `pwd`, `address`, `postal_code`,
 
 
 INSERT INTO users (`id`, `email`, `username`, `pwd`, `address`, `postal_code`, `city`, `country`, `home_phone`, `mobile_phone`, `register_date`) VALUES
-(6, 'user6@gmail.com', 'user6', 'user6', '', '', '', '', NULL, '', ''),)
+(6, 'user6@gmail.com', 'user6', 'user6', '', '', '', '', NULL, '', '2019-10-28'),)
 
 /* STORY 4 */
 

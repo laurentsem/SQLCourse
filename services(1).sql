@@ -16,9 +16,7 @@ CREATE TABLE `services` (
 ALTER TABLE `services`
   ADD PRIMARY KEY (`id_s`),
   ADD KEY `id_u` (`id_u`);
-
-  ALTER TABLE `services` DROP FOREIGN KEY `services_ibfk_1`;
-  ALTER TABLE `services` ADD CONSTRAINT `services_ibfk_1` FOREIGN KEY (`id_u`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `services_ibfk_1` FOREIGN KEY (`id_u`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
   /* STORY 2 */
 

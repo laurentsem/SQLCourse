@@ -12,9 +12,8 @@ ALTER TABLE `message`
   ADD PRIMARY KEY (`id_m`),
   ADD KEY `id_exp` (`id_exp`),
   ADD KEY `id_rec` (`id_rec`);
-
-  ALTER TABLE `message` DROP FOREIGN KEY `message_ibfk_1`; ALTER TABLE `message` ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`id_exp`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-  ALTER TABLE `message` DROP FOREIGN KEY `message_ibfk_2`; ALTER TABLE `message` ADD CONSTRAINT `message_ibfk_2` FOREIGN KEY (`id_rec`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`id_exp`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `message_ibfk_2` FOREIGN KEY (`id_rec`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
   /* STORY 2 */
 
