@@ -46,14 +46,7 @@ FROM services AS S
 LEFT JOIN services_users AS SU
 ON SU.id_s = S.id_s
 
-LEFT JOIN users AS U
-ON U.id = SU.id_u
-
-LEFT JOIN users as U2
-ON U2.id = SU.id_s
-
-
-WHERE (date_s > '2019-10-28' OR SU.id_u != U.id )AND  (U.id != 3 )
+WHERE (date_s > CURRENT_TIMESTAMP AND  SU.id_u <=> NULL )
 ORDER BY date_s DESC,city_s ASC
 /* STORY 12 */
 
