@@ -36,9 +36,12 @@ ALTER TABLE `message`
   
 
 /* STORY 8 */
-SELECT * FROM `message` as M, users as U
-WHERE U.id_u = 1
-ORDER BY date_m ASC
+
+SELECT *, (id_exp + id_rec) as conversation
+FROM message
+WHERE (message.id_exp = 2 OR message.id_rec = 2)
+GROUP BY conversation
+
 
 /* STORY 9 */
 SELECT * FROM message
