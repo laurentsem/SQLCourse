@@ -45,8 +45,7 @@ FROM services
 WHERE date_s > 2019-10-29
 ORDER BY date_s DESC,name_s ASC;
 SELECT DISTINCT date_s
-FROM services;
-
+FROM services
 
 /* STORY 12 */
 
