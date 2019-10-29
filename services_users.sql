@@ -1,7 +1,7 @@
 /* STORY 1 */
 
 CREATE TABLE `services_users` (
-  `id_s_u` int(10) UNSIGNED NOT NULL,
+  `id_s_u` int(10) UNSIGNED AUTO_INCREMENT NOT NULL,
   `id_u` int(10) UNSIGNED NOT NULL,
   `id_s` int(10) UNSIGNED NOT NULL,
   `inscription_date` datetime NOT NULL

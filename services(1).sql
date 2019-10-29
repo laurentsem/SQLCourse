@@ -1,7 +1,7 @@
 /* STORY 1*/
 
 CREATE TABLE `services` (
-  `id_s` int(10) UNSIGNED NOT NULL,
+  `id_s` int(10) UNSIGNED AUTO_INCREMENT NOT NULL,
   `id_u` int(10) UNSIGNED NOT NULL,
   `name_s` varchar(50) NOT NULL,
   `desc_s` text NOT NULL,
@@ -10,13 +10,13 @@ CREATE TABLE `services` (
   `city_s` varchar(50) NOT NULL,
   `country_s` varchar(50) NOT NULL,
   `date_s` datetime NOT NULL,
-  `info_s` text DEFAULT NULL
+  `info_s` text DEFAULT NULL,
+  PRIMARY KEY ('id_s')
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ALTER TABLE `services`
-  ADD PRIMARY KEY (`id_s`),
-  ADD KEY `id_u` (`id_u`);
-  ADD CONSTRAINT `services_ibfk_1` FOREIGN KEY (`id_u`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD FOREIGN KEY (`id_u`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
   /* STORY 2 */
 
