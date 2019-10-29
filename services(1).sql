@@ -58,7 +58,8 @@ DELETE FROM services WHERE id_s = 8
 
 /* STORY 11 */
 
-SELECT services.name_s, services.desc_s, services.adress_s, services.postalcode_s, services.city_s, services.country_s, services.date_s, U1.username, U1.mobile_phone, U2.username AS users_inscrit_name
+SELECT services.name_s, services.desc_s, services.adress_s, services.postalcode_s, services.city_s, 
+services.country_s, services.date_s, U1.username, U1.mobile_phone, U2.username AS users_inscrit_name
 FROM users AS U1
 
 LEFT JOIN services 
@@ -72,6 +73,18 @@ ON U2.id = services_users.id_u
 
 WHERE services.id_s = 3
 
+/* STORY 16 */
+SELECT * FROM services as U1 
+LEFT JOIN users 
+ON U1.id_s = users.id_u 
+
+LEFT JOIN services_users 
+ON users.id_u = services_users.id_u 
+
+LEFT JOIN users as U2 
+ON U2.id_u = services_users.id_u 
+
+WHERE users.id_u = 5
 
 
 
