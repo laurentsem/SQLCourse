@@ -74,8 +74,8 @@ ON U2.id = services_users.id_u
 WHERE services.id_s = 3
 
 /* STORY 16 */
-SELECT S.name_s, S.desc_s, S.adress_s, S.postalcode_s, S.city_s, 
-S.country_s, S.date_s, U2.username,U1.username AS users_inscrit_name, U1.email, U1.address, U1.postal_code, U1.city, U1.country, U1.mobile_phone
+SELECT S.name_s as nom_service , S.desc_s as description_service, S.adress_s as adress_service, S.postalcode_s as code_postal_service, S.city_s as city_service, 
+S.country_s as country_service, S.date_s as date_service, U2.username as user_service, U1.username AS users_inscrit, U1.email as user_inscrit_mail, U1.address as user_inscrit_adress, U1.postal_code as user_inscrit_postalcode, U1.city as user_inscrit_city, U1.country as user_inscrit_country, U1.mobile_phone as user_inscrit_mobile
 
 
 FROM services_users as SU
@@ -90,7 +90,7 @@ LEFT JOIN users AS U2
 ON U2.id = S.id_u
 
 
-WHERE U1.id = 5
+WHERE U1.id = 3
 
 
 
