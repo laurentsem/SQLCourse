@@ -22,11 +22,11 @@ ALTER TABLE `users`
 /* STORY 2 */
 
 INSERT INTO `users` (`id`, `email`, `username`, `pwd`, `address`, `postal_code`, `city`, `country`, `home_phone`, `mobile_phone`, `register_date`) VALUES
-(1, 'user1@gmail.com', 'user1', 'user1', '', '', '', '', NULL, '', ''),
-(2, 'user2@gmail.com', 'user2', 'user2', '', '', '', '', NULL, '', ''),
-(3, 'user3@gmail.com', 'user3', 'user3', '', '', '', '', NULL, '', ''),
-(4, 'user4@gmail.com', 'user4', 'user4', '', '', '', '', NULL, '', ''),
-(5, 'user5@gmail.com', 'user5', 'user5', '', '', '', '', NULL, '', '');
+(1, 'user1@gmail.com', 'user1', 'user1', '', '', '', '', NULL, '', '2019-10-28'),
+(2, 'user2@gmail.com', 'user2', 'user2', '', '', '', '', NULL, '', '2019-10-28'),
+(3, 'user3@gmail.com', 'user3', 'user3', '', '', '', '', NULL, '', '2019-10-28'),
+(4, 'user4@gmail.com', 'user4', 'user4', '', '', '', '', NULL, '', '2019-10-28'),
+(5, 'user5@gmail.com', 'user5', 'user5', '', '', '', '', NULL, '', '2019-10-28');
 
 /* STORY 3 */
 
