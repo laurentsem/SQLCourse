@@ -40,12 +40,16 @@ INSERT INTO `services` ( `id_u`, `name_s`, `desc_s`, `adress_s`, `postalcode_s`,
 ( 5, 'reparation', 'reparer des choses', '', '', '', '', '2019-11-01 16:00:00', NULL)
 
 /* STORY 10 */
-SELECT name_s, date_s, city_s, country_s, postal_code_s
-FROM services
-WHERE date_s > 2019-10-29
-ORDER BY date_s DESC,name_s ASC;
-SELECT DISTINCT date_s
-FROM services
+SELECT S.name_s, S.date_s, S.city_s, S.country_s, S.postal_code_s, U.id
+FROM services AS S
+LEFT JOIN users_services AS US
+ON US.id_s = S.id_s
+LEFT JOIN users AS U
+ON U.id = US.id_u
+LEFT JOIN users as U2
+ON U2.id = US.id_s
+WHERE date_s > '2019-10-29'
+ORDER BY date_s DESC,city_s ASC
 
 /* STORY 12 */
 
@@ -88,7 +92,6 @@ ON SU.id_s = S.id_s
 
 LEFT JOIN users AS U2
 ON U2.id = S.id_u
-
 
 WHERE U1.id = 3
 
