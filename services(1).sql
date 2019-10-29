@@ -1,7 +1,7 @@
 /* STORY 1*/
 
 CREATE TABLE `services` (
-  `id_s` int(10) UNSIGNED AUTO_INCREMENT NOT NULL,
+  `id_s` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `id_u` int(10) UNSIGNED NOT NULL,
   `name_s` varchar(50) NOT NULL,
   `desc_s` text NOT NULL,

@@ -1,7 +1,7 @@
 /* STORY 1 */
 
 CREATE TABLE `message` (
-  `id_m` int(10) UNSIGNED AUTO_INCREMENT NOT NULL,
+  `id_m` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `id_exp` int(10) UNSIGNED NOT NULL,
   `id_rec` int(10) UNSIGNED NOT NULL,
   `message_text` text NOT NULL,

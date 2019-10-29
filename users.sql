@@ -1,7 +1,7 @@
 /* STORY 1 */
 
 CREATE TABLE `users` (
-  `id_u` int(10) UNSIGNED AUTO_INCREMENT NOT NULL,
+  `id_u` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `email` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
   `pwd` varchar(100) NOT NULL,
