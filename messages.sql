@@ -41,9 +41,10 @@ WHERE U.id_u = 1
 ORDER BY date_m ASC
 
 /* STORY 9 */
-SELECT * FROM message as M, users as U 
-WHERE U.id_u= M.id_exp AND U.id_u = 1 
-ORDER BY M.date_m DESC
+SELECT * FROM message
+WHERE ( message.id_exp = 1 OR message.id_exp = 2)
+	AND ( message.id_rec = 1 OR message.id_rec = 2)
+ORDER BY message.date_m DESC
 
 /* STORY 15 */
 
