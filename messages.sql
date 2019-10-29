@@ -36,7 +36,9 @@ ALTER TABLE `message`
   
 
 /* STORY 8 */
-SELECT * FROM `message` ORDER BY date_m ASC
+SELECT * FROM `message` as M, users as U
+WHERE U.id_u = 1
+ORDER BY date_m ASC
 
 /* STORY 9 */
 SELECT * FROM message as M, users as U 
