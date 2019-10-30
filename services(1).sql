@@ -84,7 +84,7 @@ U1.address as user_inscrit_adress,
 U1.postal_code as user_inscrit_postalcode, 
 U1.city as user_inscrit_city, 
 U1.country as user_inscrit_country, 
-U1.mobile_phone as user_inscrit_mobile
+U1.mobile_phone as user_inscrit_mobile,
 count(SU.id_u) as nbe_participations_services
 FROM services_users as SU
 
