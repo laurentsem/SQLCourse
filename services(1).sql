@@ -102,6 +102,118 @@ WHERE U1.id_u = 5
 ORDER BY SU.inscription_date DESC, 
 S.city_s ASC
 
+/* STORY BONUS 18 */
+SELECT '01' AS month, U.username pseudo,  
+count(SU.id_u) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+
+WHERE (U.id_u = 4) AND MONTH(`inscription_date`) = "01"
+
+UNION
+
+SELECT '02' AS month,U.username pseudo,  
+count(SU.id_su) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE( U.id_U = 4) AND MONTH(`inscription_date`) = "02"
+
+UNION
+
+SELECT '03' AS month,U.username pseudo, 
+count(SU.id_su) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE U.id_U = 4 AND MONTH(`inscription_date`) = "03"
+
+UNION
+
+SELECT '04' AS month,U.username pseudo,  
+count(SU.id_su) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE U.id_U = 4 AND MONTH(`inscription_date`) = "04"
+
+UNION
+
+SELECT '05' AS month,U.username pseudo, 
+count(SU.id_su) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE U.id_U = 4 AND MONTH(`inscription_date`) = "05"
+
+
+UNION
+
+SELECT '06' AS month,U.username pseudo,  
+count(SU.id_su) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE U.id_U = 4 AND MONTH(`inscription_date`) = "06"
+
+
+UNION
+
+SELECT '07' AS month,U.username pseudo,  
+count(SU.id_su) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE U.id_U = 4 AND MONTH(`inscription_date`) = "07"
+
+UNION
+
+SELECT '08' AS month,U.username pseudo, 
+count(SU.id_su) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE U.id_U = 4 AND MONTH(`inscription_date`) = "08"
+
+UNION
+
+SELECT '09' AS month,U.username pseudo, 
+count(SU.id_su) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE U.id_U = 4 AND MONTH(`inscription_date`) = "09"
+
+
+UNION
+
+SELECT '10' AS month,U.username pseudo, 
+count(SU.id_u) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE (U.id_u = 4)AND MONTH(`inscription_date`) = "10"
+
+
+UNION
+
+SELECT '11' AS month, U.username pseudo,  
+count(SU.id_u) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE (U.id_u = 4) AND MONTH(`inscription_date`) = "11"
+
+
+UNION
+
+SELECT '12' AS month,U.username pseudo,  
+count(SU.id_u) as nbe_participations
+FROM services_users as SU
+LEFT JOIN users as U
+ON U.id_u = SU.id_u
+WHERE U.id_U = 4 AND MONTH(`inscription_date`) = "12"
 
 
 
