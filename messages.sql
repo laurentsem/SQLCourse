@@ -38,10 +38,10 @@ INSERT INTO `message` (`id_m`, `id_exp`, `id_rec`, `message_text`, `date_m`) VAL
 
 /* STORY 8 */
 
-SELECT *, (id_exp + id_rec) as conversation
-FROM message
-WHERE (message.id_exp = 2 OR message.id_rec = 2)
-GROUP BY conversation
+-- SELECT *, (id_exp + id_rec) as conversation
+-- FROM message
+-- WHERE (message.id_exp = 2 OR message.id_rec = 2)
+-- GROUP BY conversation
 -------
 SELECT M.*, U.*
 FROM

@@ -108,7 +108,6 @@ count(SU.id_u) as nbe_participations
 FROM services_users as SU
 LEFT JOIN users as U
 ON U.id_u = SU.id_u
-
 WHERE (U.id_u = 4) AND MONTH(`inscription_date`) = "01"
 
 UNION
@@ -118,7 +117,7 @@ count(SU.id_su) as nbe_participations
 FROM services_users as SU
 LEFT JOIN users as U
 ON U.id_u = SU.id_u
-WHERE( U.id_U = 4) AND MONTH(`inscription_date`) = "02"
+WHERE(U.id_U = 4) AND MONTH(`inscription_date`) = "02"
 
 UNION
 
@@ -157,7 +156,6 @@ LEFT JOIN users as U
 ON U.id_u = SU.id_u
 WHERE U.id_U = 4 AND MONTH(`inscription_date`) = "06"
 
-
 UNION
 
 SELECT '07' AS month,U.username pseudo,  
@@ -185,7 +183,6 @@ LEFT JOIN users as U
 ON U.id_u = SU.id_u
 WHERE U.id_U = 4 AND MONTH(`inscription_date`) = "09"
 
-
 UNION
 
 SELECT '10' AS month,U.username pseudo, 
@@ -195,7 +192,6 @@ LEFT JOIN users as U
 ON U.id_u = SU.id_u
 WHERE (U.id_u = 4)AND MONTH(`inscription_date`) = "10"
 
-
 UNION
 
 SELECT '11' AS month, U.username pseudo,  
@@ -204,7 +200,6 @@ FROM services_users as SU
 LEFT JOIN users as U
 ON U.id_u = SU.id_u
 WHERE (U.id_u = 4) AND MONTH(`inscription_date`) = "11"
-
 
 UNION
 
