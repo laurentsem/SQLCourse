@@ -46,14 +46,11 @@ ON SU.id_s = S.id_s
 
 WHERE (date_s > CURRENT_TIMESTAMP AND  SU.id_u <=> NULL )
 ORDER BY date_s DESC,city_s ASC
+
 /* STORY 12 */
 
 DELETE FROM services
 WHERE id_s = 6
-
-/* STORY 13 */
-
-DELETE FROM services WHERE id_s = 8
 
 /* STORY 11 */
 

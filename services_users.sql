@@ -36,6 +36,10 @@ INSERT INTO `services_users` ( `id_u`, `id_s`, `inscription_date`) VALUES
 INSERT INTO services_users (id_s,id_u,date_us)
 VALUES (5,4,"2019-10-29 12:00:00")
 
+/* STORY 13 */
+DELETE FROM services_users
+WHERE id_s = 5;
+
 /* STORY 17 */
 
 SELECT services.name_s, services.desc_s, services.adress_s, services.postalcode_s, services.city_s, services.country_s, services.date_s, U1.username, U1.mobile_phone, U2.username AS users_inscrit_name, U2.email, U2.address, U2.postal_code, U2.city, U2.country, services_users.inscription_date
