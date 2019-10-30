@@ -85,6 +85,7 @@ U1.postal_code as user_inscrit_postalcode,
 U1.city as user_inscrit_city, 
 U1.country as user_inscrit_country, 
 U1.mobile_phone as user_inscrit_mobile
+count(SU.id_u) as nbe_participations_services
 FROM services_users as SU
 
 LEFT JOIN users as U1
@@ -97,6 +98,10 @@ LEFT JOIN users AS U2
 ON U2.id_u = S.id_u
 
 WHERE U1.id_u = 3
+
+ORDER BY SU.inscription_date DESC, 
+S.city_s ASC
+
 
 
 
