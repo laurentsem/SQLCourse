@@ -1,20 +1,16 @@
 /* STORY 1 */
 
 CREATE TABLE `services_users` (
-  `id_s_u` int(10) UNSIGNED NOT NULL,
+  `id_su` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `id_u` int(10) UNSIGNED NOT NULL,
   `id_s` int(10) UNSIGNED NOT NULL,
-  `inscription_date` datetime NOT NULL
+  `inscription_date` datetime NOT NULL, 
+  PRIMARY KEY ('id_su')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ALTER TABLE `services_users`
-  ADD PRIMARY KEY (`id_s_u`),
-  ADD KEY `id_u` (`id_u`),
-  ADD KEY `id_s` (`id_s`);
-
-  ALTER TABLE `services_users` DROP FOREIGN KEY `services_users_ibfk_1`;
-  ALTER TABLE `services_users` ADD CONSTRAINT `services_users_ibfk_1` FOREIGN KEY (`id_u`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-  ALTER TABLE `services_users` DROP FOREIGN KEY `services_users_ibfk_2`; ALTER TABLE `services_users` ADD CONSTRAINT `services_users_ibfk_2` FOREIGN KEY (`id_s`) REFERENCES `services`(`id_s`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD FOREIGN KEY (`id_u`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD FOREIGN KEY (`id_s`) REFERENCES `services`(`id_s`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
 /* STORY 2 */

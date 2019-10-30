@@ -1,7 +1,7 @@
 /* STORY 1 */
 
 CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id_u` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `email` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
   `pwd` varchar(100) NOT NULL,
@@ -11,11 +11,12 @@ CREATE TABLE `users` (
   `country` varchar(50) DEFAULT NULL,
   `home_phone` varchar(10) DEFAULT NULL,
   `mobile_phone` varchar(10) DEFAULT NULL,
-  `register_date` date DEFAULT NULL
+  `register_date` date DEFAULT NULL, 
+  PRIMARY KEY ('id_u')
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`),
   ADD UNIQUE KEY `username` (`username`);
 
@@ -32,7 +33,7 @@ INSERT INTO `users` (`id`, `email`, `username`, `pwd`, `address`, `postal_code`,
 
 
 INSERT INTO users (`id`, `email`, `username`, `pwd`, `address`, `postal_code`, `city`, `country`, `home_phone`, `mobile_phone`, `register_date`) VALUES
-(6, 'user6@gmail.com', 'user6', 'user6', '', '', '', '', NULL, '', ''),)
+(6, 'user6@gmail.com', 'user6', 'user6', '', '', '', '', NULL, '', '2019-10-28'),)
 
 /* STORY 4 */
 

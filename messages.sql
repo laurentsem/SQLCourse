@@ -1,20 +1,17 @@
 /* STORY 1 */
 
 CREATE TABLE `message` (
-  `id_m` int(10) UNSIGNED NOT NULL,
+  `id_m` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `id_exp` int(10) UNSIGNED NOT NULL,
   `id_rec` int(10) UNSIGNED NOT NULL,
   `message_text` text NOT NULL,
   `date_m` datetime NOT NULL
+  PRIMARY KEY (`id_m`),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ALTER TABLE `message`
-  ADD PRIMARY KEY (`id_m`),
-  ADD KEY `id_exp` (`id_exp`),
-  ADD KEY `id_rec` (`id_rec`);
-
-  ALTER TABLE `message` DROP FOREIGN KEY `message_ibfk_1`; ALTER TABLE `message` ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`id_exp`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-  ALTER TABLE `message` DROP FOREIGN KEY `message_ibfk_2`; ALTER TABLE `message` ADD CONSTRAINT `message_ibfk_2` FOREIGN KEY (`id_rec`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD FOREIGN KEY (`id_exp`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD FOREIGN KEY (`id_rec`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
   /* STORY 2 */
 
