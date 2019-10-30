@@ -18,17 +18,21 @@ ALTER TABLE `message`
 
   /* STORY 2 */
 
-  INSERT INTO `message` (`id_m`, `id_exp`, `id_rec`, `message_text`, `date_m`) VALUES
-(1, 2, 1, 'Bonjour, êtes vous disponible pour garder mes enfants ?', '2019-10-30 08:00:00'),
-(2, 3, 1, 'Bonjour, êtes vous disponible pour couper mes cheveux?', '2019-10-30 08:15:00'),
-(3, 4, 1, 'Bonjour, êtes vous disponible pour donner des cours de maths à mes enfants ?', '2019-10-30 08:30:00'),
-(4, 5, 1, 'Bonjour, êtes vous disponible pour m''aider dans un démenagement ?', '2019-10-30 08:50:00'),
-(5, 2, 1, 'Bonjour, êtes vous disponible pour venir couper mes haies ?', '2019-10-30 09:10:00'),
-(6, 1, 2, 'Bonjour, je suis disponible le 6 novembre.', '2019-10-30 09:20:00'),
-(7, 1, 2, 'Bonjour, oui je suis disponible le 2 novembre.', '2019-10-30 08:10:00'),
-(8, 1, 3, 'Bonjour, oui je suis disponible le 3 novembre.', '2019-10-30 08:20:00'),
-(9, 1, 4, 'Bonjour, oui je suis disponible le 4 novembre.', '2019-10-30 08:40:00'),
-(10, 1, 5, 'Bonjour, oui je suis disponible le 5 novembre.', '2019-10-30 09:00:00');
+INSERT INTO `message` (`id_m`, `id_exp`, `id_rec`, `message_text`, `date_m`) VALUES
+(1, 5, 1, 'Bonjour, êtes vous disponible pour un demenagement ?', '2019-10-30 08:00:00'),
+(2, 1, 5, 'Oui je suis disponible pour le déménagement le 1er novembre', '2019-10-30 08:15:00'),
+(3, 6, 2, 'Bonjour, êtes vous disponible pour jardiner dans mon jardin le 2 novembre?', '2019-10-30 08:30:00'),
+(4, 2, 6, 'Non, je ne suis pas disponible le 2 novembre mais le 3 oui.', '2019-10-30 08:50:00'),
+(5, 5, 4, 'Bonjour, êtes vous disponible pour promener mes chiens ce soir ?', '2019-10-31 09:10:00'),
+(6, 4, 5, 'Oui je suis disponible a partir de 19h', '2019-10-31 10:00:00'),
+(7, 4, 3, 'Bonjour, êtes-vous disponible pour donner des cours de maths ce week end ?', '2019-10-31 15:00:00'),
+(8, 3, 4, 'Bonjour, oui je suis disponible ce week end ', '2019-10-31 16:00:00'),
+(9, 3, 6, 'Bonjour, êtes-vous disponible pour venir coiffer mon mari le 5 novembre ?', '2019-11-01 11:45:00'),
+(10, 6, 3, 'Bonjour, oui je suis disponible le 5 novembre à partir de 15h', '2019-11-01 12:00:00'),
+(11, 1, 5, 'Bonjour, êtes-vous disponible le 10 novembre pour me faire une tenue de soirée ?', '2019-11-04 13:00:00'),
+(12, 5, 1, 'Bonjour, oui, je suis disponible à partir de 13h', '2019-11-04 18:30:00'),
+(13, 4, 2, 'Bonjour, êtes vous disponible pour garder mes jumeaux le week end du 16 novembre ?', '2019-11-08 06:00:00'),
+(14, 2, 4, 'Bonjour, oui je serai ravi de garder vos jumeaux le week end du 16', '2019-11-08 12:00:00');
 
 /* STORY 7 */
   INSERT INTO `message` (`id_exp`, `id_rec`, `message_text`, `date_m`) VALUES
