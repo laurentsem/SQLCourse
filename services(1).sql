@@ -97,7 +97,7 @@ ON SU.id_s = S.id_s
 LEFT JOIN users AS U2
 ON U2.id_u = S.id_u
 
-WHERE U1.id_u = 3
+WHERE U1.id_u = 5
 
 ORDER BY SU.inscription_date DESC, 
 S.city_s ASC
