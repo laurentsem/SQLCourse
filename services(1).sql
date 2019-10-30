@@ -69,22 +69,34 @@ ON U2.id_u = SU.id_u
 WHERE S.id_s = 3
 
 /* STORY 16 */
-SELECT S.name_s as nom_service , S.desc_s as description_service, S.adress_s as adress_service, S.postalcode_s as code_postal_service, S.city_s as city_service, 
-S.country_s as country_service, S.date_s as date_service, U2.username as user_service, U1.username AS users_inscrit, U1.email as user_inscrit_mail, U1.address as user_inscrit_adress, U1.postal_code as user_inscrit_postalcode, U1.city as user_inscrit_city, U1.country as user_inscrit_country, U1.mobile_phone as user_inscrit_mobile
+SELECT S.name_s as nom_service , 
+S.desc_s as description_service, 
+S.address_s as adress_service, 
+S.postalcode_s as code_postal_service, 
+S.city_s as city_service, 
+S.country_s as country_service, 
+S.date_s as date_service, 
+U2.username as user_service, 
 
-
+U1.username AS users_inscrit, 
+U1.email as user_inscrit_mail, 
+U1.address as user_inscrit_adress, 
+U1.postal_code as user_inscrit_postalcode, 
+U1.city as user_inscrit_city, 
+U1.country as user_inscrit_country, 
+U1.mobile_phone as user_inscrit_mobile
 FROM services_users as SU
 
 LEFT JOIN users as U1
-ON SU.id_u = U1.id 
+ON SU.id_u = U1.id_u
 
 LEFT JOIN services as S
 ON SU.id_s = S.id_s
 
 LEFT JOIN users AS U2
-ON U2.id = S.id_u
+ON U2.id_u = S.id_u
 
-WHERE U1.id = 3
+WHERE U1.id_u = 3
 
 
 

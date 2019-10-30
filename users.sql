@@ -22,7 +22,7 @@ ALTER TABLE `users`
 
 /* STORY 2 */
 
-INSERT INTO `users` (`id`, `email`, `username`, `pwd`, `address`, `postal_code`, `city`, `country`, `home_phone`, `mobile_phone`, `register_date`) VALUES
+INSERT INTO `users` (`id_u`, `email`, `username`, `pwd`, `address`, `postal_code`, `city`, `country`, `home_phone`, `mobile_phone`, `register_date`) VALUES
 (1, 'user1@gmail.com', 'user1', 'user1', '', '', '', '', NULL, '', '2019-10-28'),
 (2, 'user2@gmail.com', 'user2', 'user2', '', '', '', '', NULL, '', '2019-10-28'),
 (3, 'user3@gmail.com', 'user3', 'user3', '', '', '', '', NULL, '', '2019-10-28'),
@@ -32,7 +32,7 @@ INSERT INTO `users` (`id`, `email`, `username`, `pwd`, `address`, `postal_code`,
 /* STORY 3 */
 
 
-INSERT INTO users (`id`, `email`, `username`, `pwd`, `address`, `postal_code`, `city`, `country`, `home_phone`, `mobile_phone`, `register_date`) VALUES
+INSERT INTO users (`id_u`, `email`, `username`, `pwd`, `address`, `postal_code`, `city`, `country`, `home_phone`, `mobile_phone`, `register_date`) VALUES
 (6, 'user6@gmail.com', 'user6', 'user6', '', '', '', '', NULL, '', '2019-10-28'),)
 
 /* STORY 4 */
@@ -47,4 +47,4 @@ UPDATE users
 /* STORY 14 */
 
 DELETE FROM users
-WHERE id = 4
+WHERE id_u = 4
