@@ -42,6 +42,23 @@ SELECT *, (id_exp + id_rec) as conversation
 FROM message
 WHERE (message.id_exp = 2 OR message.id_rec = 2)
 GROUP BY conversation
+-------
+SELECT M.*, U.*
+FROM
+    (
+        SELECT
+            IF( M.id_exp = 2, M.id_rec, M.id_exp ) AS interlocuteur,
+            MAX( M.id_m ) AS max_id
+        FROM message as M
+        WHERE
+            M.id_exp = 2
+            OR M.id_rec = 2
+        GROUP BY IF( M.id_exp = 2 , M.id_rec, M.id_exp )
+    ) AS DM
+        INNER JOIN message as M
+            ON DM.max_id = M.id_m
+        INNER JOIN users U
+            ON DM.interlocuteur = U.id_u
 
 
 /* STORY 9 */
